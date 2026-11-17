@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SK's Kitchen</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#070907">
+  <link rel="icon" type="image/png" href="media/brand/icon-32.png">
+  <link rel="apple-touch-icon" href="media/brand/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .kitchen { max-width: 640px; margin: 0 auto; padding: 20px 16px calc(150px + env(safe-area-inset-bottom)); display: grid; gap: 18px; }
+    .kitchen-head { display: flex; align-items: center; gap: 14px; }
+    .kitchen-head img { width: 76px; height: auto; }
+    .kitchen-head h1 { font-size: 40px; line-height: 1; display: grid; }
+    .k-date { margin-bottom: 8px; color: var(--green); font: 400 14px/1 var(--display); letter-spacing: 0.14em; text-transform: uppercase; }
+    .k-row { display: grid; grid-template-columns: 1fr auto; gap: 10px 12px; align-items: center; padding: 14px; border-radius: 16px; border: 1px solid var(--line); background: var(--panel); }
+    .k-row.is-on { border-color: var(--gold); background: rgba(241, 196, 80, 0.07); }
+    .k-on { display: flex; align-items: center; gap: 12px; min-height: 44px; cursor: pointer; font-weight: 700; }
+    .k-on input, .k-sold input { width: 26px; height: 26px; min-height: 0; accent-color: var(--gold); flex: none; padding: 0; }
+    .k-price { display: flex; align-items: center; gap: 6px; }
+    .k-price input { width: 92px; text-align: right; }
+    .k-sold { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 14.500px; }
+    .k-row:not(.is-on) .k-sold { display: none; }
+    .k-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: rgba(7, 9, 7, 0.94); border-top: 1px solid var(--line-strong); display: grid; gap: 8px; }
+    .k-bar-inner { max-width: 640px; margin: 0 auto; width: 100%; display: grid; gap: 8px; }
+    .k-msg { min-height: 1.4em; text-align: center; font-size: 14.500px; color: #c9f5d8; }
+    .k-msg.is-bad { color: #ffd3cd; }
+    .k-links { display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: center; font-size: 14px; }
+    .k-links button { background: none; border: 0; color: var(--muted); text-decoration: underline; padding: 6px 0; }
+    details.panel summary { cursor: pointer; font: 400 20px/1.1 var(--display); text-transform: uppercase; letter-spacing: 0.03em; color: var(--gold); }
+    details.panel[open] summary { margin-bottom: 14px; }
+  </style>
+  <script type="module" src="js/kitchen.js"></script>
+</head>
+<body>
+  <main class="kitchen">
+    <header class="kitchen-head">
+      <img src="media/brand/logo-sm.png" alt="SK Cravings">
+      <div>
+        <p class="k-date" data-date>SK's kitchen</p>
+        <h1><span class="h-line">What's</span><span class="h-script">cooking?</span></h1>
+      </div>
+    </header>
+
+    <!-- First visit on a phone: unlock with the key -->
+    <form class="panel form" data-setup hidden>
+      <p class="lead">This page posts the day's plates to the website. Unlock it once on this phone with the kitchen key.</p>
+      <div class="field">
+        <label for="k-token">Kitchen key</label>
+        <input id="k-token" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Paste the key here">
+      </div>
+      <button class="btn btn-gold btn-block" type="submit">Unlock this phone</button>
+      <p class="fine">The key is saved only on this phone. Anyone without it can look at this page but can't change anything.</p>
+    </form>
+
+    <div data-board hidden style="display:grid;gap:14px">
+      <p class="hint" data-live></p>
+      <div class="field">
+        <label for="k-note">Note for today <span class="opt">optional</span></label>
+        <input id="k-note" maxlength="80" placeholder="Today until sold out">
+      </div>
+      <p class="legend" style="margin:6px 0 -4px">Tick what you cooked today and set the price</p>
+      <div data-rows style="display:grid;gap:10px"></div>
+
+      <details class="panel form" data-new>
+        <summary>+ Add a new plate</summary>
+        <div class="form">
+          <div class="field"><label for="n-name">Plate name</label><input id="n-name" maxlength="60"></div>
+          <div class="field-row">
+            <div class="field"><label for="n-price">Price ($)</label><input id="n-price" type="number" inputmode="decimal" min="1" max="1000" step="0.01"></div>
+            <div class="field"><label for="n-photo">Photo <span class="opt">optional</span></label><input id="n-photo" type="file" accept="image/*"></div>
+          </div>
+          <div class="field"><label for="n-desc">Short description <span class="opt">optional</span></label><textarea id="n-desc" rows="2" maxlength="160"></textarea></div>
+          <button class="btn btn-ghost" type="button" data-add-new>Add it to today</button>
+        </div>
+      </details>
+    </div>
+  </main>
+
+  <div class="k-bar" data-bar hidden>
+    <div class="k-bar-inner">
+      <p class="k-msg" data-msg role="status" aria-live="polite"></p>
+      <button class="btn btn-gold btn-block" type="button" data-post>Post today's plates</button>
+      <div class="k-links">
+        <button type="button" data-clear>Nothing today</button>
+        <a href="./" target="_blank" rel="noopener">See the website</a>
+        <button type="button" data-forget>Lock this phone</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
