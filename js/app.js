@@ -399,6 +399,9 @@ function prepareCheckoutForm() {
   $('[data-demo-banner]').hidden = state.mode !== 'demo' && state.mode !== 'sandbox';
   if (state.mode === 'sandbox') $('[data-demo-banner]').innerHTML = '<b>Square test mode.</b> Checkout opens Square\'s sandbox. Use a Square test card; no real money moves.';
 
+  // No Square receipt to send until card payments are switched on.
+  form.elements.email.closest('.field').hidden = state.mode === 'offline';
+
   const pickup = $('input[name="ftype"][value="pickup"]');
   const delivery = $('input[name="ftype"][value="delivery"]');
   pickup.disabled = b.pickup?.enabled === false;
