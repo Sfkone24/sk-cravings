@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SK Cravings | Home Cooked Perfection in Indianapolis</title>
+  <meta name="description" content="No set menu. Big SK cooks what she's feeling in Indianapolis. See today's plates, order for pickup or $5 delivery, or request what you're craving.">
+  <meta name="theme-color" content="#070907">
+  <meta property="og:title" content="SK Cravings | Home Cooked Perfection">
+  <meta property="og:description" content="See what Big SK cooked today, or request what you're craving. Pickup in Indy or $5 delivery.">
+  <meta property="og:image" content="media/brand/og.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="media/brand/icon-32.png">
+  <link rel="apple-touch-icon" href="media/brand/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#menu">Skip to the menu</a>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Home cooked perfection</span><i>★</i><span>Indy based</span><i>★</i><span>Delivery $5</span><i>★</i><span>Personal chef</span><i>★</i><span>Private dining</span><i>★</i><span>Event catering</span><i>★</i>
+      <span>Home cooked perfection</span><i>★</i><span>Indy based</span><i>★</i><span>Delivery $5</span><i>★</i><span>Personal chef</span><i>★</i><span>Private dining</span><i>★</i><span>Event catering</span><i>★</i>
+    </div>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="SK Cravings home">
+      <img src="media/brand/logo-sm.png" alt="SK Cravings, Home Cooked Perfection" width="526" height="472">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#menu">Today</a>
+      <a href="#rotation">Past plates</a>
+      <a href="#request">Request</a>
+      <a href="#catering">Catering</a>
+      <a href="#about">About SK</a>
+    </nav>
+    <button class="cart-btn" type="button" data-open-cart aria-label="Open your order">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 7h12l-1 12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 7Zm3 0a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Order</span>
+      <b class="cart-count" data-cart-count hidden>0</b>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="status-pill" data-status><span class="dot"></span><span data-status-text>Checking today's menu</span></p>
+        <h1>
+          <span class="h-line">Home cooked</span>
+          <span class="h-script">Perfection</span>
+          <span class="h-line h-line--green">plated in Indy</span>
+        </h1>
+        <p class="lead">No set menu. Big SK cooks what she's feeling, posts it here, and when it's gone it's gone. Grab today's plates or tell her what you're craving next.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#menu">See today's plates</a>
+          <a class="btn btn-ghost" href="#request">Request a plate</a>
+        </div>
+        <ul class="trust">
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.700 7-5.500 7-10V6l-7-3Zm-3 9 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-trust-pay>New plates every drop</span></li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2.500" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.8"/></svg><span data-trust-how>Order here, confirm by DM</span></li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.500" r="2.500" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Pickup or $5 delivery</li>
+        </ul>
+      </div>
+
+      <div class="hero-media">
+        <div class="reel">
+          <video class="reel-video" data-autoplay muted loop playsinline preload="metadata" poster="media/brand/hero-poster.jpg" aria-label="Plates from the SK Cravings kitchen">
+            <source src="media/brand/hero.mp4" type="video/mp4">
+          </video>
+        </div>
+        <button class="sticker" type="button" data-featured hidden>
+          <span class="sticker-kicker" data-featured-tag>Cooked today</span>
+          <span class="sticker-name" data-featured-name></span>
+          <span class="sticker-price" data-featured-price></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <header class="section-head">
+        <h2 data-menu-title><span class="h-line">Cooked today</span> <span class="h-script">ready now</span></h2>
+        <p class="section-sub" data-menu-sub>SK posts the day's plates when she starts cooking.</p>
+      </header>
+      <div class="notice" data-closed-notice hidden></div>
+      <div class="menu-grid" data-menu-grid>
+        <div class="card card--skeleton"></div><div class="card card--skeleton"></div><div class="card card--skeleton"></div><div class="card card--skeleton"></div>
+      </div>
+    </section>
+
+    <section class="section section--rotation" id="rotation">
+      <header class="section-head">
+        <h2><span class="h-line">She's made</span> <span class="h-script">these before</span></h2>
+        <p class="section-sub">Not on the stove today. See one you want back? Tap <b>Request this</b> and tell SK.</p>
+      </header>
+      <div class="rail" data-rotation tabindex="0" aria-label="Plates SK has made before"></div>
+    </section>
+
+    <section class="section split" id="request">
+      <div class="split-copy">
+        <h2><span class="h-line">Request</span> <span class="h-script">a plate</span></h2>
+        <p class="lead">Craving something that isn't up today? Tell SK. She cooks what the city is asking for, so your request could be the next drop.</p>
+        <ul class="chips">
+          <li>Pick from past plates</li><li>Or name your craving</li><li>SK replies by DM</li>
+        </ul>
+      </div>
+      <form class="panel form" data-request-form novalidate>
+        <fieldset>
+          <legend class="legend">Plates SK has made <span class="opt">tap any you want</span></legend>
+          <div class="pick-list" data-request-chips></div>
+        </fieldset>
+        <div class="field">
+          <label for="rq-other">Something else? <span class="opt">optional</span></label>
+          <textarea id="rq-other" name="other" rows="2" maxlength="300" placeholder="Tell SK what you're craving"></textarea>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="rq-date">For when? <span class="opt">optional</span></label><input id="rq-date" name="date" type="date"></div>
+          <div class="field"><label for="rq-qty">How many plates?</label><input id="rq-qty" name="qty" type="number" min="1" max="200" value="1" inputmode="numeric"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="rq-name">Your name</label><input id="rq-name" name="name" autocomplete="name"></div>
+          <div class="field"><label for="rq-phone">Phone <span class="opt">optional</span></label><input id="rq-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(317) 555-0123"></div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-gold" type="submit">Send request to SK</button>
+        </div>
+        <p class="form-msg" data-request-msg role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="section steps" aria-label="How it works">
+      <div class="step"><b>1</b><h3>See what's cooking</h3><p>SK posts the day's plates when she starts cooking.</p></div>
+      <div class="step"><b>2</b><h3>Order it or request it</h3><p>Grab what's ready, or tell her what you want next.</p></div>
+      <div class="step"><b>3</b><h3>Pull up or get it dropped</h3><p>Pickup in Indy, or delivery for a flat $5.</p></div>
+    </section>
+
+    <section class="section split" id="catering">
+      <div class="split-copy">
+        <h2><span class="h-line">Bring SK</span> <span class="h-script">to your table</span></h2>
+        <p class="lead">Birthdays, date nights, office lunches, the whole family on Sunday. Tell SK what you're planning and she'll build the menu around it.</p>
+        <ul class="chips">
+          <li>Personal chef</li><li>Private dining</li><li>Event catering</li>
+        </ul>
+      </div>
+      <form class="panel form" data-catering-form novalidate>
+        <div class="field">
+          <label for="cat-type">What do you need?</label>
+          <select id="cat-type" name="type">
+            <option>Event catering</option><option>Private dining</option><option>Personal chef</option><option>A big plate order</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="cat-date">Date</label><input id="cat-date" name="date" type="date"></div>
+          <div class="field"><label for="cat-guests">Guests</label><input id="cat-guests" name="guests" type="number" min="1" max="2000" inputmode="numeric" placeholder="20"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="cat-name">Your name</label><input id="cat-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="cat-phone">Phone</label><input id="cat-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(317) 555-0123"></div>
+        </div>
+        <div class="field">
+          <label for="cat-details">What are you thinking?</label>
+          <textarea id="cat-details" name="details" rows="3" placeholder="The occasion, the plates you want, anything SK should know"></textarea>
+        </div>
+        <div class="form-actions" data-catering-actions>
+          <button class="btn btn-gold" type="submit">Copy request &amp; open Instagram</button>
+        </div>
+        <p class="form-msg" data-catering-msg role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="section about" id="about">
+      <img class="about-logo" src="media/brand/logo.png" alt="" width="526" height="472" loading="lazy">
+      <div>
+        <h2><span class="h-line">Big SK,</span> <span class="h-script">the SHE-E-O</span></h2>
+        <p class="lead">SK Cravings is one chef, one kitchen and a whole lot of flavor, cooked in Indianapolis and plated like it matters. Soul food Sundays, loaded potatoes, pastas, egg rolls, whatever the city is craving that week.</p>
+        <blockquote>“This ain't just a meal… it's a whole comfort experience.”<cite>Big SK</cite></blockquote>
+        <a class="btn btn-green" href="https://www.instagram.com/sk.cravings/" target="_blank" rel="noopener">Follow @sk.cravings</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="media/brand/logo-sm.png" alt="SK Cravings" width="526" height="472" loading="lazy">
+    <p>Indianapolis, Indiana · Pickup or $5 delivery · <a href="https://www.instagram.com/sk.cravings/" target="_blank" rel="noopener">@sk.cravings</a></p>
+    <p class="fine" data-foot-pay>Orders are confirmed with SK by Instagram DM.</p>
+  </footer>
+
+  <button class="cart-bar" type="button" data-open-cart data-cart-bar hidden>
+    <span class="cart-bar-count" data-cart-count>0</span>
+    <span>View your order</span>
+    <b data-cart-total>$0</b>
+  </button>
+
+  <!-- Plate details -->
+  <dialog class="sheet" id="itemDialog" aria-labelledby="itemTitle">
+    <form method="dialog" class="sheet-inner" data-item-form>
+      <button class="icon-btn sheet-close" type="button" data-close aria-label="Close">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="sheet-media" data-item-media></div>
+      <div class="sheet-body">
+        <p class="tag" data-item-tag hidden></p>
+        <h2 id="itemTitle" data-item-name></h2>
+        <p class="sheet-desc" data-item-desc></p>
+        <div data-item-options></div>
+        <div class="field">
+          <label for="itemNote">Anything SK should know? <span class="opt">optional</span></label>
+          <textarea id="itemNote" rows="2" maxlength="200" placeholder="No chives, extra sauce…"></textarea>
+        </div>
+      </div>
+      <div class="sheet-foot">
+        <div class="stepper" role="group" aria-label="Quantity">
+          <button type="button" data-qty="-1" aria-label="One less">−</button>
+          <output data-item-qty aria-live="polite">1</output>
+          <button type="button" data-qty="1" aria-label="One more">+</button>
+        </div>
+        <button class="btn btn-gold btn-grow" type="submit" data-item-add>Add to order</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Order + checkout -->
+  <dialog class="drawer" id="cartDialog" aria-labelledby="cartTitle">
+    <div class="drawer-inner">
+      <header class="drawer-head">
+        <button class="icon-btn" type="button" data-back hidden aria-label="Back to your order">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <h2 id="cartTitle" data-cart-title>Your order</h2>
+        <button class="icon-btn" type="button" data-close aria-label="Close">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+
+      <div class="drawer-body" data-view="cart">
+        <div data-cart-lines></div>
+      </div>
+
+      <form class="drawer-body form" data-view="details" data-checkout-form novalidate hidden>
+        <p class="demo-banner" data-demo-banner hidden><b>Preview mode.</b> Square isn't connected yet, so checkout is simulated and no payment is taken.</p>
+
+        <fieldset class="seg" data-fulfillment>
+          <legend class="sr">Pickup or delivery</legend>
+          <label><input type="radio" name="ftype" value="pickup" checked><span>Pickup</span></label>
+          <label><input type="radio" name="ftype" value="delivery"><span>Delivery <small data-delivery-fee>+$5</small></span></label>
+        </fieldset>
+        <p class="hint" data-fulfillment-note></p>
+
+        <div class="field-row">
+          <div class="field"><label for="co-date">Day</label><select id="co-date" name="date"></select></div>
+          <div class="field"><label for="co-time">Time</label><select id="co-time" name="time"></select></div>
+        </div>
+
+        <div data-address hidden>
+          <div class="field"><label for="co-line1">Street address</label><input id="co-line1" name="line1" autocomplete="address-line1"></div>
+          <div class="field-row">
+            <div class="field"><label for="co-line2">Apt / unit <span class="opt">optional</span></label><input id="co-line2" name="line2" autocomplete="address-line2"></div>
+            <div class="field"><label for="co-zip">ZIP</label><input id="co-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="10"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="co-city">City</label><input id="co-city" name="city" autocomplete="address-level2" value="Indianapolis"></div>
+            <div class="field field--sm"><label for="co-state">State</label><input id="co-state" name="state" autocomplete="address-level1" value="IN" maxlength="2"></div>
+          </div>
+        </div>
+
+        <div class="field"><label for="co-name">Your name</label><input id="co-name" name="name" autocomplete="name"></div>
+        <div class="field"><label for="co-phone">Phone <span class="opt">SK texts you about your order</span></label><input id="co-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(317) 555-0123"></div>
+        <div class="field"><label for="co-email">Email <span class="opt">optional, for your receipt</span></label><input id="co-email" name="email" type="email" inputmode="email" autocomplete="email"></div>
+        <div class="field"><label for="co-notes">Order notes <span class="opt">optional</span></label><textarea id="co-notes" name="notes" rows="2" maxlength="300" placeholder="Gate code, allergies, who's picking up…"></textarea></div>
+        <p class="form-error" data-checkout-error role="alert" hidden></p>
+      </form>
+
+      <footer class="drawer-foot" data-cart-foot>
+        <dl class="totals" data-totals></dl>
+        <button class="btn btn-gold btn-block" type="button" data-cart-next>Checkout</button>
+        <p class="fine" data-foot-fine>Pickup or delivery, and your details, on the next step.</p>
+      </footer>
+    </div>
+  </dialog>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+</body>
+</html>

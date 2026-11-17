@@ -1,0 +1,224 @@
+{
+  "_howToEdit": "SK has no fixed menu. The \"today\" block is the day's drop: the date it is for and the ids of the plates she cooked. Plates can only be ordered on that date; afterwards they show as the last drop and customers can request them. Prices are in CENTS (2000 = $20.00). Set \"soldOut\": true on a plate when it runs out. Easiest way to post a drop: node post-today.mjs (see SETUP.md).",
+  "today": {
+    "date": "2026-11-17",
+    "note": "Today until sold out",
+    "plates": [
+      "loaded-potatoes",
+      "lunch-platters",
+      "cornbread-chili-bowl",
+      "egg-rolls"
+    ]
+  },
+  "business": {
+    "name": "SK Cravings",
+    "tagline": "Home Cooked Perfection",
+    "chef": "Big SK",
+    "city": "Indianapolis, IN",
+    "instagram": "sk.cravings",
+    "timezone": "America/Indiana/Indianapolis",
+    "currency": "USD",
+    "orderingOpen": true,
+    "closedMessage": "Online ordering is paused right now. Send a request or follow @sk.cravings for the next drop.",
+    "pickup": {
+      "enabled": true,
+      "note": "Pickup is in Indianapolis. SK texts you the exact pickup spot once your order is in."
+    },
+    "delivery": {
+      "enabled": true,
+      "feeCents": 500,
+      "note": "Flat $5 delivery around Indianapolis."
+    },
+    "hours": {
+      "open": "11:00",
+      "close": "21:00",
+      "slotMinutes": 30,
+      "leadMinutes": 45,
+      "daysAhead": 6
+    },
+    "taxPercent": 0,
+    "allowTipping": false,
+    "contact": {
+      "phone": "",
+      "email": ""
+    }
+  },
+  "items": [
+    {
+      "id": "loaded-potatoes",
+      "name": "SK Loaded Steak & Shrimp Potatoes",
+      "price": 2000,
+      "soldOut": false,
+      "tag": "Fan favorite",
+      "description": "Loaded potatoes piled with steak and shrimp, topped with chives, bacon and sour cream.",
+      "image": "media/dishes/loaded-potatoes.jpg",
+      "video": "media/dishes/loaded-potatoes.mp4",
+      "ig": "https://www.instagram.com/sk.cravings/reel/DXz3aBspygh/",
+      "options": [
+        {
+          "id": "protein",
+          "name": "Protein",
+          "type": "single",
+          "choices": [
+            {
+              "id": "steak-shrimp",
+              "name": "Steak & shrimp",
+              "price": 0
+            },
+            {
+              "id": "double-steak",
+              "name": "Double steak, no shrimp",
+              "price": 0
+            }
+          ]
+        },
+        {
+          "id": "extras",
+          "name": "Add on",
+          "type": "multi",
+          "choices": [
+            {
+              "id": "wings-5",
+              "name": "5 wings",
+              "price": 700
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lunch-platters",
+      "name": "SK's Lunch Platter",
+      "price": 2000,
+      "soldOut": false,
+      "tag": "Lunch",
+      "description": "Sliders, sauced wings and SK's dip, plated up for lunch.",
+      "image": "media/dishes/lunch-platters.jpg",
+      "video": "media/dishes/lunch-platters.mp4",
+      "ig": "https://www.instagram.com/sk.cravings/reel/DQaHedMEtPJ/",
+      "options": []
+    },
+    {
+      "id": "cornbread-chili-bowl",
+      "name": "Cornbread Chili Bowl",
+      "price": 1500,
+      "soldOut": false,
+      "tag": "Comfort",
+      "description": "Chili served in a cornbread bowl. Sour cream and cheese come on the side.",
+      "image": "media/dishes/cornbread-chili-bowl.jpg",
+      "video": "media/dishes/cornbread-chili-bowl.mp4",
+      "ig": "https://www.instagram.com/sk.cravings/reel/DQPzV5NEkNH/",
+      "options": []
+    },
+    {
+      "id": "egg-rolls",
+      "name": "Egg Roll Plate",
+      "price": 1500,
+      "soldOut": false,
+      "tag": "Egg Roll Thursday",
+      "description": "Flavor-packed egg rolls with SK's special homemade dipping sauce.",
+      "image": "media/dishes/egg-rolls.jpg",
+      "imageFit": "contain",
+      "ig": "https://www.instagram.com/sk.cravings/reel/DQKPMCuCfe6/",
+      "options": [
+        {
+          "id": "flavor",
+          "name": "Flavor",
+          "type": "single",
+          "choices": [
+            {
+              "id": "philly",
+              "name": "Philly",
+              "price": 0
+            },
+            {
+              "id": "seafood",
+              "name": "Seafood",
+              "price": 0
+            },
+            {
+              "id": "buffalo-chicken",
+              "name": "Buffalo chicken",
+              "price": 0
+            },
+            {
+              "id": "spicy-shrimp",
+              "name": "Spicy shrimp",
+              "price": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jerk-chicken",
+      "name": "Grilled Jerk Chicken",
+      "price": null,
+      "description": "Grilled jerk chicken, plated with SK's sides.",
+      "image": "media/dishes/jerk-chicken.jpg",
+      "video": "media/dishes/jerk-chicken.mp4",
+      "ig": "https://www.instagram.com/sk.cravings/reel/DdfBCYrJcwk/",
+      "options": []
+    },
+    {
+      "id": "sunday-dinner",
+      "name": "Sunday Dinner",
+      "price": null,
+      "description": "Fall-apart pot roast in rich gravy, baked mac & cheese, and slow-cooked greens with smoked turkey.",
+      "image": "media/dishes/sunday-dinner.jpg",
+      "video": "media/dishes/sunday-dinner.mp4",
+      "ig": "https://www.instagram.com/sk.cravings/reel/DX5IxcGJhji/",
+      "options": []
+    },
+    {
+      "id": "wings-mac-greens",
+      "name": "Fried Wings, Mac & Greens",
+      "price": null,
+      "description": "Golden fried wings, baked mac & cheese and slow-cooked greens.",
+      "image": "media/dishes/wings-mac-greens.jpg",
+      "video": "media/dishes/wings-mac-greens.mp4",
+      "ig": "https://www.instagram.com/sk.cravings/reel/DX4w56fpf0I/",
+      "options": []
+    },
+    {
+      "id": "spaghetti-catfish",
+      "name": "Baked Spaghetti & Fried Catfish",
+      "price": null,
+      "description": "SK baked spaghetti (turkey pepperoni) with golden fried catfish.",
+      "image": "media/dishes/spaghetti-catfish.jpg",
+      "video": "media/dishes/spaghetti-catfish.mp4",
+      "ig": "https://www.instagram.com/sk.cravings/reel/DYDQ9QGJh3q/",
+      "options": []
+    },
+    {
+      "id": "cajun-pasta-salmon",
+      "name": "Cajun Pasta with Salmon",
+      "price": null,
+      "description": "SK Cajun pasta topped with salmon.",
+      "image": "media/dishes/cajun-pasta-salmon.jpg",
+      "video": "media/dishes/cajun-pasta-salmon.mp4",
+      "ig": "https://www.instagram.com/sk.cravings/reel/DX2W4OVJUi9/",
+      "options": []
+    },
+    {
+      "id": "lamb-chops-rasta-pasta",
+      "name": "Honey Jerk Lamb Chops x Rasta Pasta",
+      "price": null,
+      "description": "Honey jerk lamb chops over rasta pasta.",
+      "image": "media/dishes/lamb-chops-rasta-pasta.jpg",
+      "video": "media/dishes/lamb-chops-rasta-pasta.mp4",
+      "ig": "https://www.instagram.com/sk.cravings/reel/DXxEgh4psqQ/",
+      "options": []
+    },
+    {
+      "id": "cajun-chicken-pasta",
+      "name": "Blackened Cajun Chicken Pasta",
+      "price": null,
+      "description": "Blackened Cajun chicken over creamy pasta.",
+      "image": "media/dishes/cajun-chicken-pasta.jpg",
+      "video": "media/dishes/cajun-chicken-pasta.mp4",
+      "ig": "https://www.instagram.com/sk.cravings/reel/DQpfJ_xkkXg/",
+      "options": []
+    }
+  ]
+}
